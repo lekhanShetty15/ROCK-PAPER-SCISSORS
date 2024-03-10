@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    background-color:#8CC461;
+
+
+}
+.scoreDiv{
+    border: solid 2px white;
+    border-radius: 13px;
+    width: 800px;
+    height: 158px;
+    background-color: transparent;
+    position: relative;
+    left: 21%;
+    top: 7%;
+    
+}
+
+.tittle{
+    width: 50%;
+    height: 100%;
+    background-color: yellow;
+}
