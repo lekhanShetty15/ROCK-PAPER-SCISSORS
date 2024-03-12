@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone Paper Scissors</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <section class="main">
+    <section id="main" class="main">
         <div class="scoreDiv">
             <div class="tittle">
                 <h1 class="nameTitle">ROCK<br>PAPER<br>SCISSORS</h1>
@@ -16,11 +16,11 @@
             <div class="score">
                 <div class="com">
                     <h1 class="coms">COMPUTER SCORE</h1>
-                    <h1 class="comnum">0</h1>
+                    <h1 id="comnum" class="comnum"></h1>
                 </div>
                 <div class="your">
                     <h1 class="yous">YOUR<br>SCORE</h1>
-                    <h1 class="yournum">0</h1>
+                    <h1 id="yournum" class="yournum"></h1>
                 </div>
             </div>
         </div>
@@ -57,6 +57,8 @@
                     </div>
                 </div>
             </div>
+            <button class="nextBtn" id="nextBtn">NEXT</button>
+
             <button class="ruleBtn" id="ruleBtn">RULES</button>
 
             
@@ -72,25 +74,34 @@
 
         <div class="gameArea" id="gameArea">
             <div id="pickTitle">
-                <h1 class="pickTitle">YOU PICKED</h1>
-                <h1 class="pickTitle">PC PICKED</h1>
+                <h1 class="pickTitle1">YOU PICKED</h1>
+                <h1 class="pickTitle2">PC PICKED</h1>
             </div>
             <div id="selection">
-                <div id="yourImage"></div>
-
+                <div id="yourImage">  </div>
                 <div id="winDisplay">
-                    <div id="winLoose">YOU WIN</div>
+                    <div id="winLoose"></div>
                     <div id="VS">AGAINST PC</div>
                     <div><button id="againBtn">PLAY AGAIN</button></div>
                 </div>
 
-                <div id="computerImage"><img src="./images/scissor.png" alt=""></div>
-
+                <div id="computerImage"> </div>
             </div>
+        </div>
+        <div id="green">
+            <img id="green1" src="./images/green.png" alt="win">
+        <img id="green2"  src="./images/green.png" alt="win">
         </div>
         
 
+        
+
     </section>
+    <div id="final">
+        <img id="hurray" src="./images/hurray.png" alt="">
+        <button id="playAgain">PLAY AGAIN</button>
+
+    </div>
 
 
 

@@ -121,6 +121,7 @@
     padding: 20px 20px 20px 20px;
     background-color: #004429;
     display: none;
+    z-index: 2;
 }
 .cut{
     cursor: pointer;
@@ -171,12 +172,30 @@ ul li::marker{
     border: 2px solid white;
     border-radius: 10px;
     margin-top: -60px;
-    margin-left: 1200px;
+    left: 1190px;
     font-size: 15px;
     color: white;
     letter-spacing: 2px;
     font-weight: 700;
     cursor: pointer;
+    z-index: 2;
+}
+.nextBtn{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: -60px;
+    left: 1070px;
+    display: none;
+    z-index: 2;
 }
 .game{
     /* background-color: #8CC461; */
@@ -188,8 +207,6 @@ ul li::marker{
     justify-content: center;
     padding: 20px 70px;
    
-    
-
 }
 
 .gameInstruction{
@@ -288,21 +305,30 @@ ul li::marker{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    margin-left: 23%;
+    margin-left: 22%;
     display: none;
     padding-top: 60px;
 }
 
-.pickTitle{
+.pickTitle1{
     font-size: 17px;
     color: white;
     font-weight: 500;
+    margin-left: 90px;
+    z-index: 2;
+}
+.pickTitle2{
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+    margin-right: 65px;
+    z-index: 2;
+
 }
 #pickTitle{
     display: flex;
-    gap: 470px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 50px;
 }
 #VS{
@@ -337,13 +363,96 @@ ul li::marker{
 }
 
 #winDisplay{
+    width: 30%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: -140px;
+    margin-left: 30px;
+    
     
 }
+#green1{
+    width: 28%;
+    height: 12.5%;
+    position: relative;
+    top: -378px;
+    z-index: 1;
+    margin-left: 241px;
+    display: none;
+}
+#green2{
+    width: 28%;
+    height: 12.5%;
+    position: relative;
+    top: -378px;
+    z-index: 1;
+    margin-left: 107.5px;
+    display: none;
+
+}
+
 #computerImage{
     display: flex;
+    width: 18%;
+    z-index: 2;
 }
+#yourImage{
+    width: 18%;
+    z-index: 2;
+
+}
+
+#selection{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
+}
+
+
+
+
+
+
+
+
+
+#final{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8CC461;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    display: none;
+
+}
+#hurray{
+    width: 30%;
+}
+#playAgain{
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 9px;
+    width: 180px;
+    height: 45px;
+    font-size: 13px;
+    font-weight: 900px;
+    cursor: pointer;
+    transition: .2s ease;
+    margin-top: 50px;
+    margin-left: 35px;
+}
+
+
+#playAgain:active{
+    transform: scale(0.95);
+    transition: .2s ease;
+
+}
+
+

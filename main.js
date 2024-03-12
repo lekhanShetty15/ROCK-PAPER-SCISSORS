@@ -13,11 +13,6 @@ const yourImage = document.getElementById("yourImage");
 
 
 
-
-
-            //  rule button toogle
-
-
 ruleBtn.addEventListener("click", () =>{
     box.style.display = "block";
 });
@@ -38,8 +33,7 @@ stone.addEventListener("click", ()=>{
         gameArea.style.display="block"
         gameArea.style.marginTop="-400px";
         gameInstruction.style.marginLeft="980px";
-        
-        
+        gameResult()
     
 });
 paper.addEventListener("click", ()=>{
@@ -48,7 +42,7 @@ paper.addEventListener("click", ()=>{
         gameArea.style.display="block"
         gameArea.style.marginTop="-400px";
         gameInstruction.style.marginLeft="980px";
-
+        gameResult()
 
 });
 scissor.addEventListener("click", ()=>{
@@ -57,7 +51,7 @@ scissor.addEventListener("click", ()=>{
         gameArea.style.display="block"
         gameArea.style.marginTop="-400px";
         gameInstruction.style.marginLeft="980px";
-
+        gameResult()
 
 });
 
@@ -69,6 +63,10 @@ againBtn.addEventListener("click", ()=>{
     gameArea.style.display="none";
     gameArea.style.margin = null;
     gameInstruction.style.marginLeft=null;
+    green1.style.display=null;
+    green2.style.display=null;
+
+
 })
 
 
@@ -77,41 +75,122 @@ againBtn.addEventListener("click", ()=>{
 
 
 
-
-let image = ["stone", "paper", "scissor"];
+let image = ['stone', 'paper', 'scissor'];
     let randomIndex = Math.floor(Math.random()*image.length);
     let computerImage = document.getElementById("computerImage")
-    let  computerRandomImage = image[randomIndex]
-    console.log(computerRandomImage);
+    let  computerRandomImage = image[randomIndex];
 
-    if(computerRandomImage== "stone"){
+    if(computerRandomImage == "stone"){
         computerImage.innerHTML='<img src="./images/stone.png" alt="stone">'
+
+        
     }
-    else if(computerRandomImage == scissor){
+    else if(computerRandomImage == "scissor"){
         computerImage.innerHTML='<img src="./images/scissor.png" alt="scissor">'
+
     }
-    else if(computerRandomImage == paper){
+    else if(computerRandomImage == "paper"){
         computerImage.innerHTML='<img src="./images/paper.png" alt="paper">'
     }
-    else
-    {
+   
 
+            // win and loose comparison
+
+
+    function gameResult() {
+        let winLoose = document.getElementById("winLoose");
+        let yourChoice = document.getElementById("yourImage").querySelector('img').alt;
+        let computerChoice = computerRandomImage;
+        let green1 = document.getElementById("green1")
+        let green2 = document.getElementById("green2")
+
+    
+        if (yourChoice === computerChoice) {
+            winLoose.innerText = "TIE UP";
+            console.log("tie");
+        } else if (
+            (yourChoice === 'stone' && computerChoice === 'scissor') ||
+            (yourChoice === 'paper' && computerChoice === 'stone') ||
+            (yourChoice === 'scissor' && computerChoice === 'paper')
+        ) {
+            winLoose.innerText = "YOU WIN";
+            console.log("win");
+            green1.style.display="block"
+            nextBtn.style.display="block"
+            user++;
+            yournum.innerText= user;
+
+         
+           
+
+        } else {
+            winLoose.innerText = "YOU LOOSE";
+            console.log("loose");
+            green2.style.display="block"
+            green2.style.marginLeft="727px"
+            com++;
+            comnum.innerHTML = com;
+            
+        }
+        updateScores();
     }
 
 
+            //    user and computer score 
+
+
+
+let user = 0;
+let com = 0;
+let comnum = document.getElementById("comnum");
+let yournum = document.getElementById("yournum");
+let nextBtn = document.getElementById("nextBtn");
+let main = document.getElementById("main")
+let final= document.getElementById("final")
+let playAgain = document.getElementById("playAgain")
+
+nextBtn.addEventListener("click", ()=>{
+    main.style.display="none"
+    final.style.display="block"
+    final.style.display="flex"
+
+})
+
+playAgain.addEventListener("click", ()=>{
+    main.style.display="block"
+    final.style.display="none"
+    updateScores();
+    location.reload(); 
+   
+})
+
+againBtn.addEventListener("click", ()=>{
+    updateScores();
+    location.reload(); 
+
+   
+
+})
 
 
 
 
 
-    // let compicked = ['pickedRock', 'pickedPaper', 'pickedScissor'];
 
-    // compickedIndex = Math.floor(Math.random()* compicked.length);
-    
-    // let comDisplay = document.getElementById('Pc-picked');
-    // let compickedRandom = compicked[compickedIndex];
 
-    // if(compickedRandom == 'pickedRock'){
-    //     comDisplay.innerHTML = '<img src="Images/Group 6.png" alt="stone" srcset="">';
-    // }else if(compickedRandom == 'pickedPaper'){
-    //     comDisplay.innerHTML = '<img src="Images/Group 7.png" alt="paper" s
+
+function updateScores() {
+    localStorage.setItem('userScore', user);
+    localStorage.setItem('computerScore', com);
+}
+
+// Function to retrieve scores from local storage and update variables
+function retrieveScores() {
+    user = parseInt(localStorage.getItem('userScore')) || 0;
+    com = parseInt(localStorage.getItem('computerScore')) || 0;
+    comnum.innerHTML = com;
+    yournum.innerText = user;
+}
+
+window.addEventListener('load', retrieveScores);
+
