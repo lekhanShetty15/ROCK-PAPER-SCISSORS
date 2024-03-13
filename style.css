@@ -178,7 +178,6 @@ ul li::marker{
     letter-spacing: 2px;
     font-weight: 700;
     cursor: pointer;
-    z-index: 2;
 }
 .nextBtn{
     position: absolute;

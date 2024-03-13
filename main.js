@@ -10,6 +10,7 @@ const scissor = document.getElementById("scissor");
 const paper = document.getElementById("paper");
 const againBtn = document.getElementById("againBtn")
 const yourImage = document.getElementById("yourImage");
+let VS = document.getElementById("VS");
 
 
 
@@ -107,6 +108,7 @@ let image = ['stone', 'paper', 'scissor'];
     
         if (yourChoice === computerChoice) {
             winLoose.innerText = "TIE UP";
+            againBtn.innerText="REPLAY"
             console.log("tie");
         } else if (
             (yourChoice === 'stone' && computerChoice === 'scissor') ||
@@ -119,6 +121,9 @@ let image = ['stone', 'paper', 'scissor'];
             nextBtn.style.display="block"
             user++;
             yournum.innerText= user;
+            againBtn.innerText="PLAY AGAIN"
+            VS.innerText="AGAINST PC"
+
 
          
            
@@ -130,6 +135,10 @@ let image = ['stone', 'paper', 'scissor'];
             green2.style.marginLeft="727px"
             com++;
             comnum.innerHTML = com;
+            againBtn.innerText="PLAY AGAIN"
+            VS.innerText="AGAINST PC"
+
+
             
         }
         updateScores();
