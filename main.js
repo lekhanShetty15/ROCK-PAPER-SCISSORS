@@ -117,7 +117,9 @@ let image = ['stone', 'paper', 'scissor'];
         ) {
             winLoose.innerText = "YOU WIN";
             console.log("win");
-            green1.style.display="block"
+            green1.style.display="flex"
+            green1.style.marginRight="1110px"
+
             nextBtn.style.display="block"
             user++;
             yournum.innerText= user;
@@ -131,8 +133,9 @@ let image = ['stone', 'paper', 'scissor'];
         } else {
             winLoose.innerText = "YOU LOOSE";
             console.log("loose");
-            green2.style.display="block"
-            green2.style.marginLeft="727px"
+            green2.style.display="flex"
+            green2.style.marginLeft="1097px"
+
             com++;
             comnum.innerHTML = com;
             againBtn.innerText="PLAY AGAIN"
@@ -202,4 +205,20 @@ function retrieveScores() {
 }
 
 window.addEventListener('load', retrieveScores);
+
+
+
+let boxFinal= document.getElementById("boxFinal");
+let finalruleBtn= document.getElementById("finalruleBtn");
+let cutFinal = document.getElementById("cutFinal");
+
+finalruleBtn.addEventListener("click",()=>{
+    boxFinal.style.display= "block";
+})
+cutFinal.addEventListener("click", ()=>{
+    boxFinal.style.display="none";
+})
+
+
+
 

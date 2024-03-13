@@ -121,7 +121,6 @@
     padding: 20px 20px 20px 20px;
     background-color: #004429;
     display: none;
-    z-index: 2;
 }
 .cut{
     cursor: pointer;
@@ -215,6 +214,7 @@ ul li::marker{
     align-items: end;
     justify-content: center;
     flex-direction: column;
+    
 
 }
 
@@ -306,7 +306,8 @@ ul li::marker{
     flex-direction: column;
     margin-left: 22%;
     display: none;
-    padding-top: 60px;
+    padding-top: 55px;
+    
 }
 
 .pickTitle1{
@@ -371,23 +372,28 @@ ul li::marker{
     
     
 }
+#green{
+    display: flex;
+    justify-content: center;
+    margin-top: -500px;
+}
 #green1{
-    width: 28%;
-    height: 12.5%;
+    width: 27%;
     position: relative;
-    top: -378px;
     z-index: 1;
-    margin-left: 241px;
+    left: 307px;
+    top: 121px;
     display: none;
 }
 #green2{
-    width: 28%;
-    height: 12.5%;
+    width: 27%;
     position: relative;
-    top: -378px;
     z-index: 1;
-    margin-left: 107.5px;
+    top: 122px;
+    right: 311px;
     display: none;
+
+
 
 }
 
@@ -427,10 +433,13 @@ ul li::marker{
     width: 100%;
     flex-direction: column;
     display: none;
+    
 
 }
 #hurray{
+    position: relative;
     width: 30%;
+    margin-top: 50px;
 }
 #playAgain{
     background-color: white;
@@ -438,7 +447,7 @@ ul li::marker{
     border: none;
     border-radius: 9px;
     width: 180px;
-    height: 45px;
+    height: 60px;
     font-size: 13px;
     font-weight: 900px;
     cursor: pointer;
@@ -455,3 +464,81 @@ ul li::marker{
 }
 
 
+.alternate{
+    margin-top: 500px;
+}
+
+
+.gameInstructionFinal{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 950px;
+    margin-top: -380px;
+}
+.boxFinal{
+    border: solid 4px white;
+    border-radius: 13px;
+    width: 240px;
+    padding: 20px 20px 20px 20px;
+    background-color: #004429;
+    display: none;
+
+}
+.cutFinal{
+    cursor: pointer;
+    margin-left: 195px;
+    margin-top: -40px;
+    width: 18%;
+    height: 15%;
+    border-radius: 50%;
+    background-color: #FF0000;
+    border: 4px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+}
+.gameTitleFinal{
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.rulesFinal{
+    margin-top: 18px;
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: white;
+    font-size: 10px;
+    margin-left: 15px;
+    text-align: start;
+
+}
+ul{
+    list-style-type: square;
+}
+ul li::marker{
+    color: #FFD600;
+}
+
+#finalruleBtn{
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    top: 545px;
+    left: 1190px;
+    font-size: 15px;
+    color: white;
+    letter-spacing: 2px;
+    font-weight: 700;
+    cursor: pointer;
+}

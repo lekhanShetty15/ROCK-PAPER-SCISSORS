@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stone Paper Scissors</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <section id="main" class="main">
         <div class="scoreDiv">
@@ -30,7 +32,7 @@
         <div class="game">
             <div class="choice" id="choice">
                 <div class="choiceAbove">
-                    <img class="stone"src="./images/stone.png" alt="stone" id="stone">
+                    <img class="stone" src="./images/stone.png" alt="stone" id="stone">
                     <img class="line1" src="./images/Line 1.png" alt="line">
                     <img class="scissor" src="./images/scissor.png" alt="scissor" id="scissor">
                 </div>
@@ -42,30 +44,32 @@
                     </div>
                     <div class="paper"><img src="./images/paper.png" alt="paper" id="paper"></div>
                 </div>
-                  
-                </div>
-                <div class="gameInstruction" id="gameInstruction">
-                    <div class="box" id="box">
-                        <div class="cut" id="cut">X</div>
-                        <h1 class="gameTitle">Games Rules</h1>
-                        <ul>
-                            <li class="rules">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
-                            <li class="rules">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</li>
-                            <li class="rules">Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
-                            <li class="rules">If both players lay down the same hand, each player lays down another hand.</li>
-                        </ul>
-                    </div>
+
+            </div>
+            <div class="gameInstruction" id="gameInstruction">
+                <div class="box" id="box">
+                    <div class="cut" id="cut">X</div>
+                    <h1 class="gameTitle">Games Rules</h1>
+                    <ul>
+                        <li class="rules">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                        <li class="rules">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or
+                            just “rock, paper, scissors.”</li>
+                        <li class="rules">Use rock, paper, scissors to settle minor decisions or simply play to pass the
+                            time.</li>
+                        <li class="rules">If both players lay down the same hand, each player lays down another hand.
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <button class="nextBtn" id="nextBtn">NEXT</button>
-
-            <button class="ruleBtn" id="ruleBtn">RULES</button>
-
-            
-
-           
-
         </div>
+        <button class="nextBtn" id="nextBtn">NEXT</button>
+
+        <button class="ruleBtn" id="ruleBtn">RULES</button>
+
+
+
+
+
 
 
 
@@ -78,7 +82,7 @@
                 <h1 class="pickTitle2">PC PICKED</h1>
             </div>
             <div id="selection">
-                <div id="yourImage">  </div>
+                <div id="yourImage"> </div>
                 <div id="winDisplay">
                     <div id="winLoose"></div>
                     <div id="VS"></div>
@@ -90,16 +94,35 @@
         </div>
         <div id="green">
             <img id="green1" src="./images/green.png" alt="win">
-        <img id="green2"  src="./images/green.png" alt="win">
+            <img id="green2" src="./images/green.png" alt="win">
         </div>
-        
 
-        
+
+
 
     </section>
     <div id="final">
         <img id="hurray" src="./images/hurray.png" alt="">
         <button id="playAgain">PLAY AGAIN</button>
+
+        <div class="gameInstructionFinal" id="gameInstructionFinal">
+
+            <div class="boxFinal" id="boxFinal">
+                <div class="cutFinal" id="cutFinal">X</div>
+                <h1 class="gameTitleFinal">Games Rules</h1>
+                <ul>
+                    <li class="rulesFinal">Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                    <li class="rulesFinal">Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or
+                        just “rock, paper, scissors.”</li>
+                    <li class="rulesFinal">Use rock, paper, scissors to settle minor decisions or simply play to pass the
+                        time.</li>
+                    <li class="rulesFinal">If both players lay down the same hand, each player lays down another hand.
+                    </li>
+                </ul>
+            </div>
+            </div>
+        
+        <button id="finalruleBtn">RULE</button>
 
     </div>
 
@@ -114,6 +137,8 @@
 
 
 
+
     <script src="./main.js"></script>
 </body>
+
 </html>
