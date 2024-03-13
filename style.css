@@ -120,6 +120,7 @@
     width: 240px;
     padding: 20px 20px 20px 20px;
     background-color: #004429;
+    z-index: 2;
     display: none;
 }
 .cut{
